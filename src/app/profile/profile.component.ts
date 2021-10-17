@@ -1,4 +1,5 @@
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+// import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../profile.service';
 
@@ -8,16 +9,21 @@ import { ProfileService } from '../profile.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  constructor(private profileService : ProfileService){
+  profile :any ;
+  repos :any;
+  constructor(private profileService : ProfileService, private http: HttpClient){
     this.profileService.getProfileInformation().subscribe(profile =>{
       console.log(profile)
-    }
-      )
-    
+      this.profile = profile
+    });
+    this.profileService.getProfileRepos().subscribe(repos=>{
+      console.log(repos);
+      this.repos=repos
+    })
   }
+  ngOnInit():void {
 
-  ngOnInit(): void {
   }
-
 }
-
+  
+  
