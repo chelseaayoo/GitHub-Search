@@ -11,7 +11,12 @@ import { ProfileService } from '../profile.service';
 export class ProfileComponent implements OnInit {
   profile :any ;
   repos :any;
+  username! :string;
   constructor(private profileService : ProfileService, private http: HttpClient){
+    
+  }
+  findProfile(){
+    this.profileService.updateProfile(this.username)
     this.profileService.getProfileInformation().subscribe(profile =>{
       console.log(profile)
       this.profile = profile
