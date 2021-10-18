@@ -1,6 +1,7 @@
-<form action="">
+<form action="" class="search">
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search user">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username"[(ngModel)]="username" name="username"  placeholder="Search user" (keyup)="findProfile()">
 
     </div>
 </form>
@@ -15,12 +16,12 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-sm-3">
-                    <img src="{{profile.avatar_url}}"class="img-circle img-responsive" alt="Profile Image">
+                    <img src="{{profile.avatar_url}}"class="img-circle img-responsive" alt="Profile Image"><br><br>
 
                 </div>
                 <div class="col-sm-5">
                     <ul class="list-group">
-                        <li class="list-group-item" *ngIf ="profile.bio"> {{profile.bio}}</li>
+                        <li class="list-group-item" *ngIf ="profile.bio"> {{profile.bio}}</li><br>
                         <li class="list-group-item" *ngIf ="profile.hireable"> Available for hire.</li>
                         <li class="list-group-item" *ngIf ="profile.blog"> <a href="{{profile.blog}}" target="_blank"> {{profile.blog}} </a></li>
                         <li class="list-group-item" *ngIf ="profile.email"> <a href="emailto: {{profile.email}}"> {{profile.email}} </a></li>
@@ -42,10 +43,12 @@
                                 <h3 class="panel-title">Repos</h3>
 
                             </div>
-                            <div class="panel-body" *ngFor="let repo of repos">
+                            <div class="container-fluid add" *ngFor="let repo of repos">
                                 <p class="clearfix">
-                                    {{repo.name}} <a href="{{repo.html_url}}" target="blank" class="btn btn-sm btn-warning pull-right">View this project on GitHub</a><br>
-                                    {{repo.description}}
+                                    {{repo.name}}<br>
+                                    <span class="created"> Created: {{repo.created_at| dateCount}} days ago.</span><br>
+                                    {{repo.description}}<br>
+                                    <a href="{{repo.html_url}}" target="blank" class="btn btn-sm btn-warning pull-right">View this project on GitHub</a><br>
 
                                 </p>
 
