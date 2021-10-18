@@ -14,7 +14,7 @@ Create Personal Access Tokens by Visiting the _Settings_ area of your GitHub acc
 There are no known bugs.
 
 ## Technologies Used
-HTML language for creating website. Typescript. CSS and bootstrap for styling.
+ Angular CLI. HTML language for creating website. Typescript. CSS and bootstrap for styling.
 
 ## Support and contact details
 For suggestions,comments and questions,email me via chelsea.ayoo@student.moringaschool.com. Let us make coding more fruitful and fun.
