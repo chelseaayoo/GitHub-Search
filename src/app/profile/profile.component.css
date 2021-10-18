@@ -12,4 +12,14 @@
 }
 .name{
     color: blue;
+    font-size: larger;
+    font-weight: 600;
+}
+.title{
+    font-weight: 900;
+}
+.chelsea{
+    color: black;
+    font-size: larger;
+    font-weight: bolder;
 }
