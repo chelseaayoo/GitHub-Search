@@ -4,51 +4,55 @@
         <input type="text" class="form-control" id="username"[(ngModel)]="username" name="username"  placeholder="Search user" (keyup)="findProfile()">
 
     </div>
-</form>
+</form><br><br><br>
 <div *ngIf="profile">
     <div class="panel panel-default">
         <div class="panel-heading">
-            {{profile.name}} <small>({{profile.login}}) </small>
-            <span *ngIf="profile.company"> ,Works at {{profile.company}}</span>
-            {{profile.location}}
+            <div class="chelsea">{{profile.name}}</div>
+            <small>({{profile.login}})</small><br>
 
         </div>
         <div class="panel-body">
             <div class="row">
-                <div class="col-sm-3">
-                    <img src="{{profile.avatar_url}}"class="img-circle img-responsive" alt="Profile Image"><br><br>
+                <div>
+                    <img src="{{profile.avatar_url}}"class="rounded-circle img-fluid" alt="Profile Image"><br><br>
 
                 </div>
                 <div class="col-sm-5">
                     <ul class="list-group">
-                        <li class="list-group-item" *ngIf ="profile.bio"> {{profile.bio}}</li><br>
-                        <li class="list-group-item" *ngIf ="profile.hireable"> Available for hire.</li>
-                        <li class="list-group-item" *ngIf ="profile.blog"> <a href="{{profile.blog}}" target="_blank"> {{profile.blog}} </a></li>
-                        <li class="list-group-item" *ngIf ="profile.email"> <a href="emailto: {{profile.email}}"> {{profile.email}} </a></li>
+                        <li *ngIf="profile.company"> Works at {{profile.company}}</li>
+                        <li *ngIf="profile.location"> {{profile.location}}</li>
+                        <li *ngIf ="profile.bio"> {{profile.bio}}</li>
+                        <li  *ngIf ="profile.hireable"> Available for hire.</li>
+                        <li  *ngIf ="profile.blog"> <a href="{{profile.blog}}" target="_blank"> {{profile.blog}} </a></li>
+                        <li  *ngIf ="profile.email"> <a href="emailto: {{profile.email}}"> {{profile.email}} </a></li>
 
-                    </ul>
+                    </ul><br>
+                    <p>
+                        <span class="btn btn-success">{{profile.followers}} Followers</span>
+                        <span class="btn btn-primary">{{profile.following}} Following</span>
+                        <span class="btn btn-success">{{profile.public_gists}} Public gists</span>
+                    </p><br>
+                    <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on GitHub</a></p>    
 
                 </div>
                 <div class="col-sm-4">
-                    <div>
-                        <p>
-                            <span class="label label-default"> {{profile.followers}} Followers</span>
-                            <span class="label label-primary"> {{profile.following}} Following</span>
-                            <span class="label label-success"> {{profile.public_gists}} Public gists</span>
-                            <span class="label label-info"> {{profile.public_repos}} Public repos</span>
-                        </p>
-                        <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on GitHub</a></p>
+                
+                    <div>      
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Repos</h3>
+                                <h3 class="panel-title title">Repos</h3>
 
                             </div>
+                            <p>
+                                <span class="btn btn-info">{{profile.public_repos}} Public repos</span><br>
+                            </p>
                             <div class="container-fluid add" *ngFor="let repo of repos">
                                 <p class="clearfix">
-                                    {{repo.name}}<br>
+                                    <span class="name">{{repo.name}}</span><br>
                                     <span class="created"> Created: {{repo.created_at| dateCount}} days ago.</span><br>
                                     {{repo.description}}<br>
-                                    <a href="{{repo.html_url}}" target="blank" class="btn btn-sm btn-warning pull-right">View this project on GitHub</a><br>
+                                    <a href="{{repo.html_url}}" target="blank" class="btn btn-sm btn-success pull-right">View this project on GitHub</a><br>
 
                                 </p>
 

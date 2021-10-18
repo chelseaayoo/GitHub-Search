@@ -1,27 +1,29 @@
-# GitHub
+## GITHUB-SEARCH
+An app where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. ,{18th October 2021}
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+## By ONYANGO ANIPHER CHELSEA AYOO.
+## Description
+An app where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories.
 
-## Development server
+## Setup/Installation Requirements
+Install Ubuntu OS. Download Visual Studio for text editing and install terminal. Download Google Chrome for internet browsing and also to serve the application. Create an angular app called GitHub. Generate a class called GitHub. Generate a component called profile . Create a form inside profile component to collect user data. Create a pipe called date-count.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Create Personal Access Tokens by Visiting the _Settings_ area of your GitHub account, select Personal Access Tokens from the sidebar, and hit Generate New Token, GitHub will offer a list of options Do not select any. These grants read/write permissions and access to personal data. Finally, select Generate Token. 
 
-## Code scaffolding
+## Known Bugs
+There are no known bugs.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
+HTML language for creating website. Typescript. CSS and bootstrap for styling.
 
-## Build
+## Support and contact details
+For suggestions,comments and questions,email me via chelsea.ayoo@student.moringaschool.com. Let us make coding more fruitful and fun.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## License
+MIT License Copyright (c) [2021] [ONYANGO ANIPHER CHELSEA AYOO]
 
-## Running unit tests
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. Copyright (c) {2021} {ONYANGO ANIPHER CHELSEA AYOO}

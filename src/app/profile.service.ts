@@ -11,7 +11,7 @@ export class ProfileService {
   private clientsecret = 'c72c7a4a83e003bc86dd42d6823b75f7ba04bc06'
 
   constructor(private http: HttpClient) { 
-    alert ('service is ready');
+    console.log ('service is ready');
     this.username = 'chelseaayoo';
   } 
   getProfileInformation(){
@@ -21,6 +21,10 @@ export class ProfileService {
   }
   getProfileRepos(){
     return this.http.get("https://api.github.com/users/" + this.username + "/repos?client_id=" +this.clientid + "&client_secret=" +this.clientsecret )
+
+  }
+  updateProfile(username:string){
+    this.username = username;
 
   }  
 }
